@@ -1,13 +1,67 @@
 package calculator;
 
 public class LogicalOperations {
-    public int biggerNumber(int firstNumber, int secondNumber){
+
+    public boolean eligibleToVote(int yourAge){
+        if (yourAge>=18){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean evenNumber(int number){
+        if(number%2==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public int biggerTwoNumber(int firstNumber, int secondNumber){
         if (firstNumber>secondNumber){
             return firstNumber;
         }else{
             return secondNumber;
         }
     }
+
+    public void biggerThreeNUmber(int firstNumber,int secondNumber,int thirdNumber){
+        if (firstNumber>secondNumber && firstNumber>thirdNumber){
+            System.out.println(firstNumber);
+        }else if(secondNumber>firstNumber && secondNumber>thirdNumber){
+            System.out.println(secondNumber);
+        }else if (thirdNumber>firstNumber && thirdNumber>secondNumber){
+            System.out.println(thirdNumber);
+        }else {
+            roboSmile();
+        }
+    }
+
+    public void ascendingOrderTwoNumbers(int firstNumber,int secondNumber){
+        if (firstNumber>secondNumber){
+            System.out.println(firstNumber+secondNumber);
+        }else {
+            System.out.println(secondNumber+firstNumber);
+        }
+    }
+
+    public double squareNumber(double number){
+        return number*number;
+    }
+
+    public int returnBiggestNumber (int firstNumber, int secondNumber, int thirdNumber){
+        if (firstNumber >= secondNumber && firstNumber >= thirdNumber) {
+            return firstNumber;
+        } else if (secondNumber >= firstNumber && secondNumber >= thirdNumber) {
+            return secondNumber;
+        } else {
+            return thirdNumber;
+        }
+    }
+
+
     public void  winter(int snowInCm){
         if (snowInCm>8 || snowInCm==6){
             System.out.println("The amount of snow this winter was(cm): "+snowInCm);
@@ -15,7 +69,8 @@ public class LogicalOperations {
             System.out.println("The forecast snow is(cm): "+snowInCm);
         }
     }
-    public int numberFromKeyboard(int number){
+
+    public void numberFromKeyboard(int number){
         switch (number) {
             case 0 -> System.out.println("0");
             case 1 -> System.out.println("1");
@@ -27,9 +82,10 @@ public class LogicalOperations {
             case 7 -> System.out.println("7");
             case 8 -> System.out.println("8");
             case 9 -> System.out.println("9");
+            default -> System.out.println("Not allowed");
         }
-        return number;
     }
+
     public  void javaText(){
         System.out.println("""
                    J    a   V     V  a  \s
@@ -37,6 +93,7 @@ public class LogicalOperations {
                 J  J  aaaaa   V V  aaaaa
                  JJ  a     a   V  a     a""");
     }
+
     public  void roboSmile(){
         System.out.println("""
                  +”””””+\s
@@ -45,13 +102,16 @@ public class LogicalOperations {
                  | '_' |\s
                  +_____+""");
     }
+
     public  double temp(long f){
         long temperature=5/(9* (f-32));
         return temperature;
     }
+
     public  double metric(double inch){
         return inch *0.0254;
     }
+
     public  void speed(double distance,double hour,double minutes,double seconds){
         double km=distance*1000;
         double miles=distance*1609;
@@ -64,4 +124,14 @@ public class LogicalOperations {
 
     }
 
+    public String number34(int number){
+        if (number>3 && number!=4){
+            System.out.println("The number is greater than 3 and not equal to 4");
+        }else if (number==4){
+            System.out.println("The number is equal to 4");
+        }else if (number<3){
+            System.out.println("The number is lower than 3");
+        }
+        return "Something is wrong :) ";
+    }
 }
