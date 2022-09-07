@@ -2,6 +2,147 @@ package calculator;
 
 public class LogicalOperations {
 
+
+    public void printStars() {
+
+        for (int j = 1; j <= 7; j++) {
+
+            String text = "";
+
+            for (int i = j; i >= 1; i--) {
+
+                text = text + "*";
+
+            }
+            System.out.println(text);
+
+        }
+        for (int k = 7; k >= 1; k--) {
+
+            String text = "";
+
+            for (int l = k; l >= 1; l--) {
+
+                text = text + "*";
+
+            }
+            System.out.println(text);
+
+        }
+    }
+
+
+
+
+
+    public double averageFromDivisibleNumber(int from,int to,int divisibleNumber){
+        int x=from;
+        int sum=0;
+        double counter=0;
+        while(x <= to){
+            if (x % divisibleNumber == 0){
+                sum=x+sum;
+            }
+            x++;
+            counter++;
+        }
+        System.out.println("Sum is: "+sum);
+        System.out.println("Number of counters: "+counter);
+        return sum/counter;
+    }
+
+    public void printSumAndAverage(int from, int to){
+        int sum=0;
+        for (int i= from; i<=to; i++){
+            sum=i+sum;
+
+        }
+        System.out.println("Sum is: "+sum);
+        System.out.println("Average is: "+sum/(to-from+1f));
+    }
+
+    public void countGeneral(int x,int y) {
+        if (x>y) {
+            for (int i = x; i >= y; i--) {
+                System.out.println(i);
+            }
+        }else if (y>x){
+            for (int i = x; i <= y; i++) {
+                System.out.println(i);
+            }
+        }else{
+            System.out.println("Numbers are equals !");
+        }
+    }
+    public void countBackwards(int biggest,int smallest){
+        for (int i=biggest;i>=smallest;i--){
+            System.out.println(i);
+        }
+    }
+
+
+    public void countForwards(int biggest,int smallest){
+        for (int i =smallest; i <=biggest; i++){
+            System.out.println(i);
+        }
+    }
+
+    public void oddNumbersSum(int from, int to){
+        int x=from;
+        int sum=0;
+        while(x <= to){
+            if (x %2 !=0){
+                sum=x+sum;
+            }
+            x++;
+        }
+        System.out.println("Sum is: "+sum);
+    }
+    public void evenNumbersSum(int from, int to){
+        int x=from;
+        int sum=0;
+        while(x <= to){
+            if (x %2 ==0){
+                sum=x+sum;
+            }
+            x++;
+        }
+        System.out.println("Sum is: "+sum);
+
+    }
+
+    public double oddNumbersSumAndAverage(int from, int to){
+        int x=from;
+        int sum=0;
+        double counter=0;
+        while(x <= to){
+            if (x %2 !=0){
+                sum=x+sum;
+            }
+            x++;
+            counter++;
+        }
+        System.out.println("Sum is: "+sum);
+        System.out.println("Number of counters: "+counter);
+        return sum/counter;
+    }
+
+    public double evenNumbersSumAndAverage(int from, int to){
+        int x=from;
+        int sum=0;
+        double counter=0;
+        while(x <= to){
+            if (x %2 ==0){
+                sum=x+sum;
+            }
+            x++;
+            counter++;
+        }
+        System.out.println("Sum is: "+sum);
+        System.out.println("Number of counters: "+counter);
+        return sum/counter;
+    }
+
     public boolean eligibleToVote(int yourAge){
         if (yourAge>=18){
             return true;

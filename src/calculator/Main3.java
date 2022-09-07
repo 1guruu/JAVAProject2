@@ -2,6 +2,10 @@ package calculator;
 
 import java.util.Random;
 
+//        average (to-From+1f)
+//            counter=0
+//            counter++
+//            average=sum/counter
 public class Main3 {
     static Random random= new Random();
     public static void main(String[] args) {
@@ -15,10 +19,12 @@ public class Main3 {
 //        System.out.println("The square of the number is: "+logicalOperations.squareNumber(randomNumber));
 //        logicalOperations.numberFromKeyboard(123);
 //        System.out.println(logicalOperations.evenNumber(13));
-//
-//        logicalOperations.biggerThreeNUmber(1,1,1);
-//        logicalOperations.speed(35,1,54,60);
+//        System.out.println("Average is: "+logicalOperations.averageFromDivisibleNumber(5,20,9));
+//        logicalOperations.evenNumbersSum(2,10);
+//        System.out.println("Average sum is: "+ logicalOperations.evenNumbersSumAndAverage(2,10));
 
+//        logicalOperations.countGeneral(3,3);
+//        logicalOperations.printStars();
 
 
 
@@ -27,6 +33,8 @@ public class Main3 {
 
     }
 
-
-
 }
+
+
+
+
